@@ -1,0 +1,23 @@
+dock() {
+	/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh
+}
+
+d-ntbk() {
+    source $HOME/Dropbox/tech/setup/environments/jupyter_firefox.sh
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk docker-local.com:8888
+}
+
+d-build-dev() {
+	source $HOME/Dropbox/tech/setup/build_dev.sh
+}
+
+d-build() {
+	source $HOME/Dropbox/tech/setup/build_dev.sh
+}
+
+d-clear-containers() {
+	docker ps -a | grep -v CONTAINER | grep -v dbdata | awk '{print "docker stop "$1"; docker rm "$1}' > temp.go
+	source temp.go
+	rm temp.go
+	docker ps -a
+}
