@@ -144,6 +144,7 @@ brew "boot2docker"
 cask 'google-chrome'
 cask 'sublime-text3'
 cask 'dropbox'
+cask 'github-desktop'
 EOF
 
 if [ ! -f "$HOME/.ssh/github_rsa.pub" ]; then
