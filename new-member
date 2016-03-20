@@ -60,11 +60,11 @@ if [ ! -f "$HOME/.paths" ]; then
 fi
 
 ## storage for python gutils google api creds / keys
-if [ ! -f "$HOME/.credentials" ]; then
+if [ ! -d "$HOME/.credentials" ]; then
 	mkdir "$HOME/.credentials"
 fi
 
-if [ ! -f "$HOME/.keys" ]; then
+if [ ! -d "$HOME/.keys" ]; then
 	mkdir "$HOME/.keys"
 fi
 
