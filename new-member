@@ -139,6 +139,7 @@ brew "imagemagick"
 #docker
 cask "virtualbox"
 brew "boot2docker"
+cask "dockertoolbox"
 
 #other useful stuff
 cask 'google-chrome'
