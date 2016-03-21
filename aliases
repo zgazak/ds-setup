@@ -12,7 +12,7 @@ d-build-dev() {
 }
 
 d-build() {
-	source $HOME/Dropbox/tech/setup/build_dev.sh
+	source $HOME/Dropbox/tech/setup/build.sh
 }
 
 d-clear-containers() {
