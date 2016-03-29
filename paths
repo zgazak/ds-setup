@@ -2,3 +2,4 @@ export KEYS_PATH=$HOME/.keys
 export CREDENTIALS_PATH=$HOME/.credentials
 export NOTEBOOK_PATH=$HOME/Dropbox/tech/notebooks
 export CODE_PATH=$HOME/Dropbox/tech/src/
+export DB_BCKUP=$HOME/Dropbox/tech/data/postgresdata

@@ -123,6 +123,7 @@ brew bundle --file=- <<EOF
 tap "homebrew/services"
 tap "caskroom/cask"
 tap "caskroom/versions"
+tap "homebrew/x11"
 
 # github
 brew "git"
@@ -146,6 +147,7 @@ cask 'google-chrome'
 cask 'sublime-text3'
 cask 'dropbox'
 cask 'github-desktop'
+cask 'xquartz'
 EOF
 
 if [ ! -f "$HOME/.ssh/github_rsa.pub" ]; then
@@ -153,4 +155,5 @@ if [ ! -f "$HOME/.ssh/github_rsa.pub" ]; then
   open ~/Applications/GitHub\ Desktop.app
 fi
 
-#if [$(which virtualbox) 
+echo "192.168.99.100  docker-local.com" | sudo tee -a /etc/hosts 
+
