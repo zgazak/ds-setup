@@ -148,6 +148,7 @@ cask 'sublime-text3'
 cask 'dropbox'
 cask 'github-desktop'
 cask 'xquartz'
+cask 'atom'
 EOF
 
 if [ ! -f "$HOME/.ssh/github_rsa.pub" ]; then

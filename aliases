@@ -2,6 +2,13 @@ dock() {
 	/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh
 }
 
+d-failed() {
+	docker-machine restart default 
+	yes | docker-machine regenerate-certs default
+	eval "$(docker-machine env default)"
+	d-hard-clear
+}
+
 d-ntbk() {
     source $HOME/Dropbox/tech/setup/environments/jupyter_firefox.sh
 }
