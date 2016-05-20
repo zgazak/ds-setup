@@ -9,6 +9,13 @@ d-failed() {
 	d-hard-clear
 }
 
+d-clear-exited() {
+	docker ps -a | grep -v CONTAINER | grep -v dbdata | grep Exited | awk '{print "docker stop "$1"; docker rm "$1}' > temp.go
+	source temp.go
+	rm temp.go
+	docker ps -a
+}
+
 d-ntbk() {
     source $HOME/Dropbox/tech/setup/environments/jupyter_firefox.sh
 }
