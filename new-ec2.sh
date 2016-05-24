@@ -1,6 +1,6 @@
 
 if ! command -v docker >/dev/null; then
-  sudo apt-get install yum
+  sudo apt-get install -y yum
   sudo yum update -y
   sudo yum install -y docker
   sudo service docker start
