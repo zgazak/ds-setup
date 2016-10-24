@@ -1,6 +1,15 @@
-dock() {
-	/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh
+dock() { /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh}
+
+lista() { more ~/.aliases }
+dls() { docker ps -a }
+dli() { docker images }
+
+d-last-resort() {
+    docker-machine rm -f default
+    docker-machine create -d virtualbox default
 }
+
+d-fix() { eval "$(docker-machine env default)"}
 
 d-failed() {
 	docker-machine restart default 
@@ -14,6 +23,15 @@ d-clear-exited() {
 	source temp.go
 	rm temp.go
 	docker ps -a
+}
+
+
+d-ntbk-test() {
+ source $HOME/Dropbox/tech/setup/environments/jupyter_firefox-test.sh
+}
+
+d-ntbk-prod() {
+ source $HOME/Dropbox/tech/setup/environments/jupyter_firefox-prod.sh
 }
 
 d-ntbk() {
